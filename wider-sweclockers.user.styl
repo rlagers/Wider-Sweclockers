@@ -1,0 +1,140 @@
+/* ==UserStyle==
+@name           Wider Sweclockers
+@namespace      github.com/openstyles/stylus
+@version        0.1.0
+@description    More width on Sweclockers
+@author         Lagers
+@homepageURL	https://github.com/rlagers/Wider-Sweclockers
+@supportURL		https://github.com/rlagers/Wider-Sweclockers/issues
+@updateURL		https://github.com/rlagers/Wider-Sweclockers/issues
+@license		MPL-2.0
+@preprocessor   stylus
+
+@var select var-page-width "Page Max-Width" {
+    "Orginal": "1270px",
+    "1400px": "1400px",
+    "1600px": "1600px",
+    "1800px*": "1800px",
+    "100%": "100%"
+}
+@var select var-article-width "Article Max-Width" {
+    "Orginal": "648px",
+    "Middle" : "972px",
+    "Big": "1280px",
+    "100%*": "100%"
+}
+@var select var-forum-width "Forum Max-Width" {
+    "Orginal": "940px",
+    "Middle" : "1200px",
+    "Big": "1400px",
+    "100%*": "100%"
+}
+@var select var-image-width "Image Max-Width" {
+    "Orginal": "648px",
+    "Middle" : "972px",
+    "Big*": "1280px",
+    "100%": "100%"
+}
+
+==/UserStyle== */
+
+@-moz-document domain("sweclockers.com") {
+
+    /************************************************
+     Main Layout of Sweclockers
+    ************************************************/
+    .container,
+    .col-content,
+    .col-content-wide {
+        max-width: var-page-width !important;
+    }
+
+    /************************************************
+     Main Content And Articles
+    ************************************************/
+    .content-primary,
+    .content-head,
+    .content-foot,
+    .carousel {
+        max-width: var-article-width;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /************************************************
+     Carousel max height 316px, Space around
+    ************************************************/
+    .carousel,
+    .carousel .inner {
+        max-height: 324px;
+    }
+    .carousel .slide {
+        max-width: 324px;
+    }
+    .carousel .section {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /************************************************
+     Image in Articles
+    ************************************************/
+    .content-primary img,
+    .article-bbcode .bbImage,
+    .article-bbcode .bbSlideshow,
+    .article-bbcode .bbVideo,
+    .card-text .bbcode .bbVideoYoutube,
+    .article-bbcode .tv-frame {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100%;
+        max-width: var-image-width !important;
+    }
+
+    /************************************************   
+     Forum and other image and video default to 720px
+    ************************************************/
+    .bbImage,
+    .bbVideo,
+    .bbVideoYoutube {
+        max-width: 720px;
+        height: auto;
+    }
+
+    /************************************************
+     Forum Width
+    ************************************************/
+    #forumList-1,
+    #threadList-1,
+    .list-actions,
+    .forumPosts,
+    .thread-footer,
+    .forumForm,
+    .col-content-wide .content-head {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: var-forum-width;
+    }
+
+    /************************************************
+     Gallery list 
+    ************************************************/
+
+    .galleryList {
+        justify-content: space-around;
+    }
+    
+    .gallery-item {
+        max-width: 300px;
+        flex-shrink: 1;
+        align-items: stretch;
+    }
+    .gallery-images {
+        width: 100%;
+    }
+    
+    .galleryText .bbVideo {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
