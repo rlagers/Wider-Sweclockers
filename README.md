@@ -1,2 +1,9 @@
 # Wider-Sweclockers
-Make Sweclockers wider
+
+Make www.sweclockers.com wider
+
+A userstyle for [Sweclockers.com](https://sweclockers.com)
+
+Install Stylus in you browser and then press the link below
+
+[Install Wider Sweclockers](https://github.com/rlagers/big-sweclockers/raw/main/big-sweclockers.user.styl)
