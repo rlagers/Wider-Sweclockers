@@ -129,20 +129,26 @@
     /************************************************
      Gallery list 
     ************************************************/
-
+    
     .galleryList {
         justify-content: space-around;
     }
-    
-    .gallery-item {
-        max-width: 300px;
-        flex-shrink: 1;
-        align-items: stretch;
+
+    /* don't work with flex row with nowrap on H3. Why? */
+    .gallery-item h3 {
+        white-space: normal;
     }
+
+    /* 154px /2 * 3 */
+    .gallery-item {
+        max-width: 231px;
+    }
+
+    /* For the galleri */
     .gallery-images {
         width: 100%;
     }
-    
+
     .galleryText .bbVideo {
         margin-left: auto !important;
         margin-right: auto !important;
