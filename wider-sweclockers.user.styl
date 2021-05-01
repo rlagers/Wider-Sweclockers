@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Wider Sweclockers
 @namespace      github.com/openstyles/stylus
-@version        0.1.5
+@version        0.2.0
 @description    More width on Sweclockers
 @author         Lagers
 @homepageURL	https://github.com/rlagers/Wider-Sweclockers
@@ -11,6 +11,7 @@
 @preprocessor   stylus
 
 @var select var-page-width "Page Max-Width" {
+    "tighten": "1000px",
     "Orginal": "1270px",
     "1400px": "1400px",
     "1600px": "1600px",
@@ -18,7 +19,7 @@
     "100%": "100%"
 }
 @var select var-article-width "Article Max-Width" {
-    "Orginal": "648px",
+    "Orginal": "660px",
     "Middle" : "972px",
     "Big": "1280px",
     "100%*": "100%"
@@ -30,7 +31,7 @@
     "100%*": "100%"
 }
 @var select var-image-width "Image Max-Width" {
-    "Orginal": "648px",
+    "Orginal": "696px",
     "Middle" : "972px",
     "Big*": "1280px",
     "100%": "100%"
@@ -62,27 +63,14 @@
     }
 
     /************************************************
-     Carousel max height 316px, Space around
-    ************************************************/
-    .carousel,
-    .carousel .inner {
-        max-height: 324px;
-    }
-    .carousel .slide {
-        max-width: 638px;
-    }
-    .carousel .section {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    /************************************************
      Image in Articles
     ************************************************/
     .content-primary img,
+    .content-primary .bbVideoYoutube,
     .article-bbcode .bbImage,
     .article-bbcode .bbSlideshow,
     .article-bbcode .bbVideo,
+    .article-bbcode .bbVideoYoutube,
     .card-text .bbcode .bbVideoYoutube,
     .article-bbcode .tv-frame {
         margin-left: auto !important;
@@ -92,18 +80,18 @@
     }
 
     /************************************************   
-     Forum and other image and video default to 720px
+     Forum and other image and video default to 728px
     ************************************************/
     .bbImage,
-    .bbVideo,
-    .bbVideoYoutube {
-        max-width: 720px;
+    .forum-post-body .bbVideo,
+    .forum-post-body .bbVideoYoutube {
+        max-width: 728px;
         height: auto;
     }
         
     /* SweC Shop Image */
-    .article-footer .bbImage .inner img {
-        width: 154px;
+    .article-footer .bbImage .inner {
+        max-width: 154px;
     }
     
     .withPrisjakt img {
@@ -117,7 +105,7 @@
     #forumList-1,
     #threadList-1,
     .list-actions,
-    .forumPosts,
+    .forum-posts,
     .thread-footer,
     .forumForm,
     .col-content-wide .content-head {
@@ -154,3 +142,5 @@
         margin-right: auto !important;
     }
 }
+
+
